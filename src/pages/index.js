@@ -4,7 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../../public/plugins/bootstrap/css/bootstrap.min.css"
+import "../plugins/bootstrap/css/bootstrap.min.css"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
