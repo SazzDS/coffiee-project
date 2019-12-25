@@ -1,3 +1,87 @@
+:root {
+  --mainBrown: #2d1ef1;
+  --mainYellow: #ff9e09;
+  --mainYellowRGB: rgba(255,158,9,0.5);
+  --mainGrey: #ece8dc;
+  --mainWhite: #fff;
+  --mainWhiteRGB: rgba(255, 255, 255, 0);
+  --mainDark: #222;
+};
+@font-face {
+    font-family: 'qsnd';
+    src: url('../plugins/fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pirulen';
+    src: url('../plugins/fonts/pirulen.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ply';
+    src: url('../plugins/fonts/Play-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'monster';
+    src: url('../plugins/fonts/monsterrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'roma';
+    src: url('../plugins/fonts/Michroma.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ptsun';
+    src: url('../plugins/fonts/PT_Sans-Caption-Web-Regular.ttf') format('truetype');
+}
+
+
 .navbar-brand img {
   width: 30px;
+}
+
+h1 {
+  font-family: "pirulen" !important;
+}
+
+h2, h3 {
+  font-family: "qsnd" !important;
+}
+
+h4, h5, h6 {
+  font-family: "ptsun" !important;
+}
+
+p {
+  font-family: "monster" !important;
+  color: var(--mainDark);
+  opacity: 1;
+}
+
+body {
+  font-family: "monster" !important;
+  background: var(--mainWhite);
+  color: var(--mainDark);
+  color: #000;
+  opacity: 1;
+}
+
+.cart-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.text-yellow {
+  color: var(--mainYellow);
+}
+
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(--mainYellowRGB, --mainWhiteRGB);
+  opacity: 1;
 }
