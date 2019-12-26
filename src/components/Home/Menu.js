@@ -62,7 +62,7 @@ export default class Menu extends React.Component {
 													<h4 className="col-md-6 mb-0 text-muted text-center">{node.title}</h4>
 													<h4 className="col-md-6 mb-0 text-muted text-right">{node.price}</h4>
 												</div>
-												<p className="text-muted">{node.description.description}</p>
+												<p className="text-muted text-justify">{node.description.description}</p>
 											</div>
 										</div>
 									)
