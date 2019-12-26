@@ -8,14 +8,14 @@ import "../plugins/bootstrap/css/bootstrap.min.css";
 import BackgroundSection from "../components/Globals/BackgroundSection";
 import FooterSection from "../components/Globals/FooterSection";
 import InfoSection from "../components/Home/Info";
-const IndexPage = ({data}) => (
+const AboutPage = ({data}) => (
 
   <Layout>
     <SEO title="Home" />
 	<BackgroundSection 
 	img={data.img.childImageSharp.fluid} 
-	title="Background Section's Data" 
-	styleClass="default-background" 
+	title="About Background Section's Data" 
+	styleClass="about-background" 
 	></BackgroundSection>
     <InfoSection></InfoSection>
     <FooterSection></FooterSection>
@@ -24,7 +24,7 @@ const IndexPage = ({data}) => (
 
 export const query = graphql`{
   img:file(relativePath:{
-    eq: "bg.jpg"
+    eq: "gatsby-astronaut.png"
   }){
     childImageSharp{
       fluid{
@@ -35,5 +35,5 @@ export const query = graphql`{
 }`;
 
 
-export default IndexPage
+export default AboutPage
 

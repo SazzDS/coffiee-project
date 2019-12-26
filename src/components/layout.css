@@ -9,7 +9,7 @@
 };
 @font-face {
     font-family: 'qsnd';
-    src: url('../plugins/fonts/quicksand/Quicksand-Regular.ttf') format('truetype');
+    src: url('../plugins/fonts/quicksand/Quicksand_Book.otf') format('OpenType');
 }
 
 @font-face {
@@ -47,11 +47,11 @@ h1 {
 }
 
 h2, h3 {
-  font-family: "qsnd" !important;
+  font-family: "ptsun" !important;
 }
 
 h4, h5, h6 {
-  font-family: "ptsun" !important;
+  font-family: "roma" !important;
 }
 
 p {
@@ -78,10 +78,50 @@ body {
 }
 
 .default-background {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(--mainYellowRGB, --mainWhiteRGB);
-  opacity: 1;
+  background: linear-gradient(60deg, rgba(255,158,9,0.5), rgba(255, 255, 255, 0)) !important;
+  background-position: center !important;
+  background-size: 100% 100%, cover, cover !important;
+  background-repeat: no-repeat;
+  opacity: 1 !important;
+}
+
+.default-background .title {
+  color: var(--mainWhite);
+}
+
+.about-background .title {
+  color: var(--mainYellow);
+}
+.about-background {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(60deg, rgba(55,55,9,0.9), rgba(125, 125, 50, 0.9)) !important;
+  color: var(--mainDark);
+  background-position: center !important;
+  background-size: 100% 100%, cover, cover !important;
+  opacity: 1 !important;
+}
+
+.btn-yellow {
+  color: var(--mainYellow);
+  border: 1px solid var(--mainYellow) !important;
+  font-weight: bold;
+  font-family: "pirulen";
+}
+
+.btn-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainWhite);
+  border: var(--mainYellow);
+}
+
+.footer {
+  background: var(--mainDark);
+  color: var(--mainWhite);
 }
