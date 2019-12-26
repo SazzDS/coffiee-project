@@ -3,21 +3,53 @@ import {Link} from 'gatsby';
 import Title from "../Globals/Title";
 import Img from 'gatsby-image';
 
+const getCategories = items => {
+	let tempItems = items.map(items=>{
+		return items.node.category;
+	});
+	let tempCategories = new Set(tempItems);
+	let categories = Array.from(tempCategories);
+	categories = ["all", ...categories];
+	// console.log(categories);
+	return categories;
+}
+
 export default class Menu extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
 			items: props.items.edges,
 			coffeeItems: props.items.edges,
+			categories: getCategories(props.items.edges)
 		};
 		// console.log(props.items);
 	}
+
+	handleItems = (category) => {
+		let tempItems = [...this.state.items];
+		if (category === 'all') {
+			this.setState(()=>{
+				return {coffeeItems: tempItems}
+			})
+		} else {
+			let items = tempItems.filter(({node})=> node.category === category);
+			this.setState(()=>{
+				return {coffeeItems: items}
+			})
+		}
+	}
+
 	render() {
 		if (this.state.items.length > 0) {
 			return (
 				<section className="menu py-5">
-					<div className="container">
+					<div className="container text-center">
 						<Title title="Our Menu" />
+						<div className="row mb-5 text-center">
+						{this.state.categories.map((category, index) => {
+							return (<button key={index} type="button" className="btn btn-yellow text-capitalize mx-1 center-block" onClick={()=>{this.handleItems(category)}}>{category}</button>)
+						})}
+						</div>
 						<div className="row">
 								{this.state.coffeeItems.map(({node})=>{
 									return (
