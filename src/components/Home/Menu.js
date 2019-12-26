@@ -58,7 +58,8 @@ export default class Menu extends React.Component {
 											<Img fixed={node.image.fixed} />
 											</div>
 											<div className="flex-grow-1 py-3">
-												<h4 className="col-11 col-md-6 text-muted">{node.title}</h4>
+												<h4 className="mb-0 text-muted">{node.title}</h4>
+												<h4 className="mb-0 text-muted text-right">{node.price}</h4>
 												<p className="text-muted">{node.description.description}</p>
 											</div>
 										</div>
