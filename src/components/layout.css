@@ -125,3 +125,8 @@ body {
   background: var(--mainDark);
   color: var(--mainWhite);
 }
+
+.menu {
+  background: var(--mainGrey);
+  color: var(--mainDark);
+}
