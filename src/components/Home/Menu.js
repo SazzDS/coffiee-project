@@ -59,8 +59,8 @@ export default class Menu extends React.Component {
 											</div>
 											<div className="flex-grow-1 py-3">
 												<div className="row">
-													<h4 className="mb-0 text-muted">{node.title}</h4>
-													<h4 className="mb-0 text-muted text-right">{node.price}</h4>
+													<h4 className="col-md-6 mb-0 text-muted text-center">{node.title}</h4>
+													<h4 className="col-md-6 mb-0 text-muted text-right">{node.price}</h4>
 												</div>
 												<p className="text-muted">{node.description.description}</p>
 											</div>
