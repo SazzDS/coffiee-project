@@ -2,7 +2,7 @@ import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 
 export default function BackgroundSection(img) {
-	console.log(img.styleClass);
+	// console.log(img.styleClass);
 	return (
 		<div>
 			<BackgroundImage

@@ -9,16 +9,13 @@ import BackgroundSection from "../components/Globals/BackgroundSection";
 import Menu from "../components/Home/Menu";
 import FooterSection from "../components/Globals/FooterSection";
 import InfoSection from "../components/Home/Info";
+
 const IndexPage = ({data}) => (
 
   <Layout>
     <SEO title="Home" />
-	<BackgroundSection 
-	img={data.img.childImageSharp.fluid} 
-	title="Background Section's Data" 
-	styleClass="default-background" 
-	></BackgroundSection>
-    <Menu items={data.menu}></Menu>
+    <BackgroundSection img={data.img.childImageSharp.fluid} title="Background Section's Data" styleClass="default-background" />
+    <Menu items={data.menu} />
     <InfoSection />
     <FooterSection />
   </Layout>
@@ -46,7 +43,7 @@ export const query = graphql`{
         category
         image{
           fixed(width: 50, height: 50){
-            ...GatsbyContentfulFixed_tracedSVG
+            ...GatsbyContentfulFixed_withWebp
           }
         }
       }
